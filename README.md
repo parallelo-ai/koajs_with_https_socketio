@@ -1,2 +1,17 @@
 # koajs_with_https_socketio
-implementation of KoaJS application with official SocketIO, served through HTTPS
+This is a simple implementation of KoaJS application with 
+the official SocketIO library, served through HTTPS.
+
+This repository is instrumental to [this blog post]()
+
+## Generating self signed certificate
+
+You'll need to have `openssl` installed, and then from within your clone 
+of this repository run
+
+```
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365
+```
+
+Providing a passphrase which you'll need to write at the line 8 of the file
+`index.js` in order for the code to work
