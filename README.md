@@ -2,7 +2,7 @@
 This is a simple implementation of KoaJS application with 
 the official SocketIO library, served through HTTPS.
 
-This repository is instrumental to [this blog post]()
+This repository is instrumental to [this blog post](http://blog.parallelo.ai/socketio-communications-with-koajs-revisited/)
 
 ## Generating self signed certificate
 

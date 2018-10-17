@@ -23,10 +23,11 @@ const thePort = process.env.PORT || 3000
 
 // Set up the socket.io server
 const httpsServer = require('https').createServer(serverOptions, app.callback())
-//const httpServer = require('http').createServer(app.callback())
 const io = require('socket.io')(httpsServer)
-//const io = require('socket.io')(httpServer)
 
+// To listen through HTTP
+//const httpServer = require('http').createServer(app.callback())
+//const io = require('socket.io')(httpServer)
 
 io.on('connection', socket => {
   console.log('client connected with id ' + socket.id)
@@ -43,4 +44,6 @@ app.use(serve('./ui'))
 
 console.log('Server listening at port ' + thePort)
 httpsServer.listen(thePort)
+
+// To listen through HTTP
 //httpServer.listen(thePort)
